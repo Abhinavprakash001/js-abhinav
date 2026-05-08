@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+          <button class="button1">10</button>
+          <button class="button1">20</button>
+          <button class="button1">30</button>
+        </div>
+
+        <div class="out-sider-button">
+            
+        </div>
+    </div>
+</body>
+<script>
+    var btns=document.querySelectorAll(".button1")
+   
+    var outer=document.querySelectorAll(".out-sider-button")
+    
+    
+    var btns1=0;
+     for(let i = 0; i<btns.length; i++){
+    btns[i].addEventListener("click",function(){
+        // document.querySelector(".button1").style.display="none"
+      let  add=Number(btns[i].innerHTML);
+         btns1 =btns1+add;
+         document.querySelector(".out-sider-button").innerHTML=btns1
+                console.log("hii") 
+         
+    })
+}
+
+</script>
+</html>
