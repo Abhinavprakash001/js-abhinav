@@ -1,0 +1,53 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: pink;
+}
+
+.rectagle-shape{
+    height: 14vh;
+    width: 30vw;
+    border: 2px solid black;
+}
+.square-shape{
+    height: 35vh;
+    width: 13vw;
+    
+     border: 2px solid black;
+}
+.middle{
+    display: flex;
+    justify-content: flex-end;
+    gap: 25vh;
+    background-color: pink;
+}
+.square{
+    height: 25vh;
+    width: 25vh;
+     border: 2px solid black;
+   
+}
+.down{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    
+}
+.square-shape-bottom{
+     height: 35vh;
+     width: 13vw;
+     border: 2px solid black;
+     
+      
+}
+.rectagle-shape-bottom{
+    height: 14vh;
+    width: 30vw;
+    border: 2px solid black;
+    
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
