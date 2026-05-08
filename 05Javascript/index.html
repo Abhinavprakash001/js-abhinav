@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+     <div class="container">
+           <div id="box">
+            
+                  <div id="rectangle">
+                     <div id="circle">
+                     </div>
+                     <div id="circle">
+                     </div>
+                     <div id="circle">
+                     </div>
+                     <div id="circle">
+                     </div>
+                  </div>
+                  <div id="full-screen"></div>
+           </div>
+    </div>
+</body>
+<script>
+    var arr=[{dp:"360_F_197637933_f6ImHqOfwvUQX0CNKxHjfNd21RDZoCbJ.webp",circle:"360_F_269184784_4pnmyHf1jB4uXvoM0ggMNSWAOagpb8bW.webp"},
+              {dp:"360_F_228886628_zs3BUVLKi2viopIZc7WTepIDusM1Df12.webp",circle:"philipp-pilz-iQRKBNKyRpo-unsplash.jpg"},
+              {dp:"redcharlie-xtvo0ffGKlI-unsplash.jpg",circle:"scott-carroll-favQn8WgRyk-unsplash.jpg"},
+              {dp:"philipp-pilz-iQRKBNKyRpo-unsplash.jpg",circle:"zdenek-machacek-UxHol6SwLyM-unsplash.jpg"},
+   ,]
+//    var arr=[1,2,3,4] 
+    var rectangle=document.querySelector("#rectangle")     
+    var clutter=""
+    arr.forEach(function(elem,idx){
+        clutter += ` <div id="circle">
+            <img  id="${idx}" src="${elem.dp}" alt="">
+                     </div>`
+        
+    })
+    rectangle.innerHTML=clutter;
+        
+    rectangle.addEventListener("click",function(dets){
+         document.querySelector("#full-screen").style.display="block"
+         document.querySelector("#full-screen").style.backgroundImage =`url(${arr[dets.target.id].circle})`
+         
+        setTimeout(function()  {
+         document.querySelector("#full-screen").style.display="none"
+    }, 2000)
+   
+        });
+
+   
+</script>
+</html>
