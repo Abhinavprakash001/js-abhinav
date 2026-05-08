@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button class="button">Click me</button>
+        <div class="itel"></div>
+    </div>
+</body>
+<script>
+    var btn=document.querySelector(".button")
+    var itel=document.querySelector(".itel")
+    //var bottom ;
+     
+    var click = 0;
+    btn.addEventListener('click',() => {
+     const value=click.value;
+        click=click+1;
+        //  location.reload();
+         console.log(value)
+         document.querySelector(".itel").innerHTML=click
+         localStorage.setItem("name",value)
+    })
+
+    window.addEventListener('load',() => {
+        localStorage.getItem('name')
+         click.innerHTML=value; 
+          
+    })
+</script>
+</html>
