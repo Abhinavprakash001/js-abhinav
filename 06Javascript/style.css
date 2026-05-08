@@ -1,0 +1,51 @@
+.container{
+    height: 100%;
+    width: 100%;
+}
+
+.navbar{
+    height: 25vh;
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:10px ;
+    padding-right: 10px;
+}
+.box{
+    height: 100px;
+    width: 400px;
+    background-color: beige;
+}
+.navbar img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.article{
+    margin-top: 10px;
+     gap: 5px;
+     display: grid;
+     grid-template-columns: repeat(2,2fr)
+}
+.box1{
+    height: 50vh;
+    width: 100vh;
+    background-color: blue; 
+}
+.footer{
+    display: flex;
+}
+
+#line2{
+    background-color: blue;
+    height: 20vh;
+    width: 30vh;
+  
+}
+#effect{
+    height: 20vh;
+    width: 30vh; 
+    background-color: blue;
+}
