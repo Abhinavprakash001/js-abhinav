@@ -1,0 +1,142 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     position: relative; 
+}
+.box{
+    height: 70vh;
+    width: 45vh;
+    border: 1px solid black;
+    
+}
+.navbar{
+    height: 7vh;
+    width: 45vh;
+    
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 3px 4px skyblue;
+}
+.navbar img{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+}
+#cursor{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+    cursor: pointer;
+}
+.grid-view{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap:5px;
+     
+}
+#box1{
+    height: 21vh;
+    width: 20vh;
+    /* background-color: saddlebrown; */
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#box1 img{
+    height: 15vh;
+    width: 20vh;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+    /* border-radius: 10px ; */
+    object-fit: cover;
+    /* border: 1px solid black; */
+}
+.footer{
+    /* white-space: nowrap; */
+    display: inline-block;
+   margin-top: 4vh;
+   height: 15vh;
+   width: 21vw;
+   /* background-color: blueviolet; */
+    /* position: absolute;  */
+   overflow: hidden;
+  
+ 
+}
+
+
+.item-price{
+    height:5vh ;
+   display: flex;
+   justify-content: center;
+   justify-content: space-between;
+   justify-content: space-around;
+   align-items: center;
+    
+    
+}
+.btn{
+    height: 20px;
+    width: 35px;
+   
+    background-color: rgb(155, 139, 139);
+}
+ .btn1{
+    height: 20px;
+    width: 35px;
+    background-color: rgb(155, 139, 139);
+ }
+
+ 
+#justify-content{
+   display: flex;
+   justify-content:space-between;
+   justify-content: space-around;
+   align-items: center;
+   background-color: rgb(240, 226, 226);
+}  
+/* #cancel{ */
+   /* display: none;  */
+/* } */
+#Full-container{
+     height: 70vh;
+    width: 45vh;
+   
+    position: absolute;
+    
+    display: flex;
+    justify-content: right;
+    
+   
+    display: none;
+}
+#half-container{
+    height: 70vh;
+    width: 22.5vh;
+    background-color: blue;
+    position: absolute;
+    right: 0px;
+     
+    /* display: none; */
+}
+#half-container2{
+    height: 70vh;
+    width: 22.5vh;
+    position: absolute;
+     background-color: black;
+     opacity: 0.4;
+}
+.item-inbox{
+     
+}

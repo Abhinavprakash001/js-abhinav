@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div id="Full-container">
+          <div id="half-container2"></div>
+          <div id="half-container">
+            <div>
+              <button id="x">X</button>
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="navbar">
+          <div id="icon"><h1>Voice</h1></div>
+          <div id="cursor">
+            <img src="photo/redcharlie-xtvo0ffGKlI-unsplash.jpg" />
+            <div class="item-inbox"></div>
+          </div>
+        </div>
+
+        <div class="grid-view">
+          <div class="grid">
+            <div id="box1">
+              <img src="photo/redcharlie-xtvo0ffGKlI-unsplash.jpg" />
+              <div class="item-price">
+                <p>Rs<span class="price">13</span></p>
+                <button class = "btn">+</button>
+                <button class = "btn1">-</button>
+              </div>
+            </div>
+            <div id="box1">
+              <img src="photo/redcharlie-xtvo0ffGKlI-unsplash.jpg" />
+              <div class="item-price">
+                <p>Rs<span class="price">12</span></p>
+                <button class = "btn">+</button>
+                <button class = "btn1">-</button>
+              </div>
+            </div>
+            <div id="box1">
+              <img src="photo/sutirta-budiman-Jgiv1rSIpVM-unsplash.jpg" />
+              <div class="item-price">
+                <p>Rs<span class="price">14</p>
+                <button class ="btn">+</button>
+                <button class = "btn1">-</button>
+              </div>
+            </div>
+            <div id="box1">
+              <img src="photo/zdenek-machacek-UxHol6SwLyM-unsplash.jpg" />
+              <div class="item-price">
+                <p>Rs<span class="price">13</p>
+                <button class = "btn">+</button>
+                <button class = "btn1">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div id="justify-content">
+            <!-- <button id="cancel">cancel</button> -->
+            <div><h2>Voice</h2></div>
+            <div>Home</div>
+            <div>content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var cursor = document.querySelector("#cursor");
+    var footer = document.querySelector("#justify-content");
+    var cancel = document.querySelector("#cancel");
+    var Full = document.querySelector("#half-container2");
+    var x = document.querySelector("#x");
+    var btns = document.querySelectorAll(".btn");
+    console.log(btns)
+    var prices = document.querySelectorAll(".price")  
+    var btns1=document.querySelectorAll(".btn1")
+    var box=document.querySelector(".item-inbox")
+    
+    const addlocalstorage=(dets) => {
+          return localStorage.setItem('abhinav',JSON.stringify(dets))
+    }
+    cursor.addEventListener("click", function () {
+      //  document.querySelector("#justify-content").style.display="inline"
+      // document.querySelector("#cancel").style.display = "inline";
+      document.querySelector("#Full-container").style.display = "block";
+      // document.querySelector("#half-container").innerHTML=footer.innerHTML
+    });
+    // cancel.addEventListener("click", function () {
+    //  document.querySelector("#justify-content").style.display="flex"
+    //  document.querySelector("#cancel").style.display="none"
+    //  document.querySelector("#Full-container").style.display="none"
+    // });
+    Full.addEventListener("click", function () {
+      document.querySelector("#Full-container").style.display = "none";
+    });
+    x.addEventListener("click", function () {
+      document.querySelector("#Full-container").style.display = "none";
+    });
+    
+    // btns.length=3;
+    //  for(let i=0; i<btns.length; i++){
+    //   btns[i].addEventListener("click",function(){
+    //       alert(`all items=${prices[i].textContent +(1+1)} ,prices=${prices[i].textContent}`)
+    //   })
+    //  }
+   var click=0;
+
+    for(let i=0; i<btns.length; i++){
+      btns[i].addEventListener("click",function(){
+         let num=Number(prices[i].innerHTML);
+            click=click+num;
+              addlocalstorage(click);
+        
+             document.querySelector(".item-inbox").innerHTML=click
+            // alert(`all items=${([click])}`)
+          
+         })
+         btns1[i].addEventListener("click",function(){  
+          let num=Number(prices[i].innerHTML);
+              click=click-num;
+              document.querySelector(".item-inbox").innerHTML=click
+              //  alert(`all items=${([click])}`)
+          
+         })
+        
+        }
+  </script>
+</html>
