@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="main-container"> <img className="image" src="images.jpg" />
+           <h2>Angel Priya</h2>
+           <h5>Stranger</h5>
+           <div >
+           <button id="add">Add Friend</button>
+           
+           </div>
+        </div>
+    </div>
+</body>
+<script>
+     var add=document.querySelector("#add")
+     var h5=document.querySelector("h5")
+     var check=0;
+
+    add.addEventListener("click",function(){
+        if(check==0) {
+           h5.innerHTML="Friends"
+           add.innerHTML="Remove"
+           check=1;
+        }else{
+            h5.innerHTML="stranger"
+            h5.style.color="red"
+            add.innerHTML="Add Friend"
+            check=0
+        }
+    })
+    
+
+</script>
+</html>
